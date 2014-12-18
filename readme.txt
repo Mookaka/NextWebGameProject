@@ -7,4 +7,3 @@
 7777777
 8888888
 10101010
-you have a very beutefuaaadadaad,.
