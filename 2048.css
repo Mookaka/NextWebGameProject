@@ -1,45 +1,80 @@
+body
+{
+    background-color: #F1EFE9;
+}
+
 header
 {
     display: block;
     margin: 0 auto;
-    width:500px;
+    width:100%;
     text-align: center;
 }
 
 header h1
 {
-    font-family: Arial;
-    font-size: 60px;
+    font-family: "微软雅黑" Arial;
+    font-size: 40px;
     font-weight: bold;
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
 }
 
 header #newgamebutton
 {
-   display: block;
-    margin:20px auto;
+    display: block;
+    margin:0px auto;
     
     width: 100px;
     padding: 10px 10px;
     background-color: #8f7a66;
     
-    font-family: Arial;
+    font-family: "微软雅黑" Arial;
+    font-weight: bold;
     color: white;
     
     border-radius: 10px;
+    box-shadow: 0px 5px 5px #515953;
+
+    -webkit-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    -ms-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
     
     text-decoration: none;
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
 }
 
-header #newgamebutton:hover
+/*header #newgamebutton:hover
 {
-    background-color: #9f8b77;
+    background-color: #A9A8AC;
+    color: #515953;
+}
+*/
+header #newgamebutton:active
+{
+    background-color: #AC9D79;
+    box-shadow: 0px 20px 40px #E4DFE4;
+    -webkit-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    -ms-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
 }
 
 header p
 {
-    font-family: Arial;
+    font-family: "微软雅黑" Arial;
+    font-weight: bold;
     font-size: 25px;
     margin: 20px auto;
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
 }
 
 #grid-container
@@ -51,9 +86,10 @@ header p
     margin:50px auto;
     background-color: #bbada0;
     
+    box-shadow: 0px 1px 5px #5F6858;
     border-radius:10px;
     position: relative;
-    
+    user-select:none;
 }
 
 .grid-cell
@@ -62,19 +98,26 @@ header p
     height: 100px;
     border-radius: 6px;
     background-color: #ccc0b3;
-    
+    user-select:none;
     position:absolute;
+
+    box-shadow: 0px 1px 20px #5F6858;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
 }
 
 .number-cell
 {
     border-radius: 6px;
     
-    font-family: Arial;
+    font-family: "微软雅黑" Arial;
     font-weight: bold;
     font-size: 60px;
     line-height: 100px;
     text-align: center;
-    
+    user-select:none;
     position: absolute;
+    
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
 }
