@@ -1,7 +1,7 @@
-documentWidth = window.screen.availWidth;
-gridContainerWidth = 0.92*documentWidth;
-cellSideLength = 0.18*documentWidth;
-cellSpace = 0.04*documentWidth;
+documentWidth = window.screen.availWidth < window.screen.availHeight?window.screen.availWidth:window.screen.availHeight;
+gridContainerWidth = 0.79*documentWidth;
+cellSideLength = 0.16*documentWidth;
+cellSpace = 0.03*documentWidth;
 
 function getPosTop(i,j)
 {
@@ -57,6 +57,8 @@ function getLevel(score)
             case 4096:return "干掉百度";break;
             case 3192:return "收购阿里";break;
     }   
+    
+    return "black";
 
 }
 
@@ -103,7 +105,7 @@ function canMoveLeft(board)
 function canMoveRight(board)
 {
      for(var i = 0; i < 4; i++)
-        for(var j = 0; j < 3; j++)
+        for(var j = 2; j >= 0; j--)
             if(board[i][j] != 0)
                 if(board[i][j+1] == 0 || board[i][j+1] == board[i][j])
                     return true;
@@ -124,7 +126,7 @@ function canMoveUp(board)
 function canMoveDown(board)
 {
     for(var j = 0; j < 4; j++)
-        for(var i = 0; i < 3; i++)
+        for(var i = 2; i >= 0; i--)
             if(board[i][j] != 0)
                 if(board[i+1][j] == 0 || board[i+1][j] == board[i][j])
                     return true;

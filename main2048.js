@@ -16,22 +16,22 @@ $(document).ready(function(){
 
 function prepareForMobile()
 {
-    if(documentWidth > 500)
+    if(documentWidth > 400)
     {
-        gridContainerWidth = 500;
-        cellSideLength = 100;
-        cellSpace = 20;
+        gridContainerWidth = 316;
+        cellSideLength = 64;
+        cellSpace = 12;
     }
     
     $('#grid-container').css('width',gridContainerWidth - 2*cellSpace);
     $('#grid-container'
         ).css('height',gridContainerWidth - 2*cellSpace);
     $('#grid-container').css('padding',cellSpace);
-    $('#grid-container').css('border-radius',0.04*gridContainerWidth);
+    $('#grid-container').css('border-radius',0.02*gridContainerWidth);
     
     $('.grid-cell').css('width',cellSideLength);
     $('.grid-cell').css('height',cellSideLength);
-    $('.grid-cell').css('border-radius',0.06*cellSideLength);
+    $('.grid-cell').css('border-radius',0.02*cellSideLength);
     
     
 }
@@ -293,12 +293,12 @@ function isgameover()
 
 function gameover1()
 {
-    alert('');
+    alert('如果人生可以再来，那就把梦想重新拾起，继续向前！奔跑吧，兄弟！');
 }
 
 function gameover2()
 {
-    alert('下一步，除了和奥特曼拯救宇宙，这个世界已经没有可以让你施展的地方了。');
+    alert('下一步，除了和奥特曼拯救宇宙，这个世界已经没有可以让你施展的地方了。飞吧，兄弟！');
 }
 
 function moveLeft()
@@ -348,11 +348,11 @@ function moveRight()
         return false;
 
     for(var i = 0; i < 4; i++)
-        for(var j = 0; j < 3; j++)
+        for(var j = 2; j >= 0; j--)
         {
             if(board[i][j] !=0)
             {
-                for(var k = j+1; k < 4; k++)
+                for(var k = 3; k > i; k--)
                 {
                     if(board[i][k] == 0 && noBlockHoriziontal(i,j,k,board))
                     {
@@ -437,11 +437,11 @@ function moveDown()
         return false;
 
     for(var j = 0; j < 4; j++)
-        for(var i = 0; i < 3; i++)
+        for(var i = 2; i >= 0; i--)
         {
             if(board[i][j] != 0)
             {
-                for(var k = i+1; k < 4; k++)
+                for(var k = 3; k > i; k--)
                 {
                     if(board[k][j] == 0 && noBlockVertical(j,i,k,board))
                     {
